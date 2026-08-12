@@ -98,3 +98,62 @@ footer {
   font-weight: bold;
   color: #14213d;
 }
+.owner-profile-header {
+  background: white;
+  text-align: center;
+  padding: 40px 20px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+}
+
+.owner-profile-header h2 {
+  font-size: 36px;
+  margin-bottom: 5px;
+}
+
+.owner-tagline {
+  color: #666;
+}
+
+.owner-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  margin-bottom: 35px;
+}
+
+.stat-card {
+  background: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.stat-card h3 {
+  margin-top: 0;
+  font-size: 16px;
+}
+
+.stat-card p {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.profile-section {
+  background: white;
+  padding: 25px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
