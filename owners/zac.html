@@ -1,18 +1,298 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Zac Benjamin | Shine Fantasy Football League</title>
+<title>Zac Benjamin | Shine Fantasy Football League</title>
 
-  <link rel="stylesheet" href="../style.css">
+<style>
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f6f8;
+  color: #18212f;
+  line-height: 1.6;
+}
+
+/* HEADER */
+
+header {
+  background: #111827;
+  color: white;
+  padding: 22px;
+  border-bottom: 5px solid #2f7d4a;
+}
+
+.header-inner {
+  max-width: 1150px;
+  margin: auto;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 26px;
+}
+
+nav {
+  margin-top: 14px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-right: 22px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* MAIN */
+
+main {
+  max-width: 1150px;
+  margin: 35px auto;
+  padding: 0 20px;
+}
+
+/* OWNER HERO */
+
+.owner-hero {
+  background: white;
+  border-radius: 14px;
+  padding: 35px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  box-shadow: 0 3px 14px rgba(0,0,0,.08);
+  margin-bottom: 25px;
+}
+
+.owner-photo {
+  width: 150px;
+  height: 150px;
+  background: #e5e7eb;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  flex-shrink: 0;
+  border: 5px solid #2f7d4a;
+}
+
+.owner-info h2 {
+  font-size: 38px;
+  margin: 0;
+}
+
+.owner-subtitle {
+  color: #6b7280;
+  margin-top: 2px;
+}
+
+.owner-description {
+  max-width: 700px;
+  margin-top: 15px;
+}
+
+/* STAT CARDS */
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.stat {
+  background: #111827;
+  color: white;
+  padding: 22px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-size: 30px;
+  font-weight: bold;
+  color: #7ed39b;
+}
+
+.stat-label {
+  font-size: 13px;
+  color: #d1d5db;
+}
+
+/* GENERAL CARDS */
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 28px;
+  margin-bottom: 24px;
+  box-shadow: 0 3px 12px rgba(0,0,0,.06);
+}
+
+.card h2 {
+  margin-top: 0;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 10px;
+}
+
+.two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+/* DRAFT PERSONALITY */
+
+.position-row {
+  margin-bottom: 16px;
+}
+
+.position-label {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.bar {
+  background: #e5e7eb;
+  height: 16px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  background: #2f7d4a;
+  height: 100%;
+}
+
+/* TABLE */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background: #111827;
+  color: white;
+  text-align: left;
+}
+
+th, td {
+  padding: 12px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+tr:hover {
+  background: #f8fafc;
+}
+
+/* AWARDS */
+
+.awards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.award {
+  border-left: 5px solid #2f7d4a;
+  background: #f8fafc;
+  padding: 14px 18px;
+}
+
+.award-title {
+  font-weight: bold;
+}
+
+.award-text {
+  color: #6b7280;
+}
+
+/* QUOTE */
+
+.quote {
+  font-size: 21px;
+  font-style: italic;
+  border-left: 6px solid #2f7d4a;
+  padding: 15px 20px;
+  background: #f8fafc;
+}
+
+/* STORY */
+
+.story {
+  margin-bottom: 20px;
+}
+
+.story h3 {
+  margin-bottom: 4px;
+}
+
+/* FOOTER */
+
+footer {
+  background: #111827;
+  color: #9ca3af;
+  text-align: center;
+  padding: 30px;
+  margin-top: 50px;
+}
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+  .owner-hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .two-column {
+    grid-template-columns: 1fr;
+  }
+
+  .awards {
+    grid-template-columns: 1fr;
+  }
+
+  nav a {
+    display: inline-block;
+    margin-bottom: 8px;
+  }
+
+}
+
+</style>
 </head>
+
 
 <body>
 
-  <header>
-    <h1>Shine Fantasy Football League</h1>
+<header>
+
+  <div class="header-inner">
+
+    <h1>🏈 Shine Fantasy Football League</h1>
 
     <nav>
       <a href="../index.html">Home</a>
@@ -21,132 +301,371 @@
       <a href="../owners.html">Owners</a>
       <a href="../champions.html">Champions & Records</a>
     </nav>
-  </header>
+
+  </div>
+
+</header>
 
 
-  <main>
-
-    <section class="owner-profile-header">
-
-      <h2>Zac Benjamin</h2>
-
-      <p class="owner-tagline">
-        Shine Fantasy Football League Owner
-      </p>
-
-    </section>
+<main>
 
 
-    <section class="owner-stats">
+<!-- OWNER HEADER -->
 
-      <div class="stat-card">
-        <h3>Championships</h3>
-        <p>Coming Soon</p>
-      </div>
+<section class="owner-hero">
 
-      <div class="stat-card">
-        <h3>Regular Season Titles</h3>
-        <p>Coming Soon</p>
-      </div>
+  <div class="owner-photo">
+    ZB
+  </div>
 
-      <div class="stat-card">
-        <h3>Career Record</h3>
-        <p>Coming Soon</p>
-      </div>
+  <div class="owner-info">
 
-      <div class="stat-card">
-        <h3>Playoff Appearances</h3>
-        <p>Coming Soon</p>
-      </div>
+    <h2>Zac Benjamin</h2>
 
-    </section>
+    <div class="owner-subtitle">
+      Shine Fantasy Football League Owner
+    </div>
 
+    <div class="owner-description">
+      Career statistics, draft tendencies, championship history,
+      memorable seasons and questionable personnel decisions from
+      one of the league's longtime owners.
+    </div>
 
-    <section class="profile-section">
+  </div>
 
-      <h2>Owner History</h2>
-
-      <p>
-        Career history, championship seasons, memorable teams,
-        rivalries and other league accomplishments will go here.
-      </p>
-
-    </section>
+</section>
 
 
-    <section class="profile-section">
+<!-- CAREER STATS -->
 
-      <h2>Draft History</h2>
+<section class="stats">
 
-      <table>
+  <div class="stat">
+    <span class="stat-number">—</span>
+    <span class="stat-label">CHAMPIONSHIPS</span>
+  </div>
 
-        <thead>
-          <tr>
-            <th>Season</th>
-            <th>First Round Pick</th>
-            <th>Position</th>
-          </tr>
-        </thead>
+  <div class="stat">
+    <span class="stat-number">—</span>
+    <span class="stat-label">REGULAR SEASON TITLES</span>
+  </div>
 
-        <tbody>
-          <tr>
-            <td>Coming Soon</td>
-            <td>Coming Soon</td>
-            <td>—</td>
-          </tr>
-        </tbody>
+  <div class="stat">
+    <span class="stat-number">—</span>
+    <span class="stat-label">PLAYOFF APPEARANCES</span>
+  </div>
 
-      </table>
+  <div class="stat">
+    <span class="stat-number">—</span>
+    <span class="stat-label">CAREER WIN %</span>
+  </div>
 
-    </section>
-
-
-    <section class="profile-section">
-
-      <h2>Career Highlights</h2>
-
-      <ul>
-        <li>Championship seasons</li>
-        <li>Best regular season finishes</li>
-        <li>Highest-scoring teams</li>
-        <li>Memorable draft picks</li>
-        <li>Notable league moments</li>
-      </ul>
-
-    </section>
+</section>
 
 
-    <section class="profile-section">
+<!-- OWNER RESUME -->
 
-      <h2>Most Drafted Players</h2>
+<section class="card">
 
-      <p>Historical player data coming soon.</p>
+  <h2>🏆 Owner Resume</h2>
 
-    </section>
+  <div class="two-column">
+
+    <div>
+      <strong>League Member Since</strong>
+      <p>Coming soon</p>
+
+      <strong>Best Regular Season Finish</strong>
+      <p>Coming soon</p>
+
+      <strong>Best Championship Finish</strong>
+      <p>Coming soon</p>
+    </div>
+
+    <div>
+      <strong>Career Record</strong>
+      <p>Coming soon</p>
+
+      <strong>Total Points Scored</strong>
+      <p>Coming soon</p>
+
+      <strong>Most Successful Season</strong>
+      <p>Coming soon</p>
+    </div>
+
+  </div>
+
+</section>
 
 
-    <section class="profile-section">
+<!-- DRAFT PERSONALITY -->
 
-      <h2>Stories & Lore</h2>
+<section class="card">
 
-      <p>
-        The good decisions, the awful decisions, trash talk,
-        draft-night stories and other moments worth remembering.
-      </p>
+  <h2>📊 Draft Personality</h2>
 
-    </section>
+  <p>
+    What position does Zac historically target with his most
+    important pick?
+  </p>
 
+  <div class="position-row">
+    <div class="position-label">
+      <span>Running Back</span>
+      <span>Coming soon</span>
+    </div>
+
+    <div class="bar">
+      <div class="bar-fill" style="width: 70%;"></div>
+    </div>
+  </div>
+
+
+  <div class="position-row">
+    <div class="position-label">
+      <span>Wide Receiver</span>
+      <span>Coming soon</span>
+    </div>
+
+    <div class="bar">
+      <div class="bar-fill" style="width: 45%;"></div>
+    </div>
+  </div>
+
+
+  <div class="position-row">
+    <div class="position-label">
+      <span>Quarterback</span>
+      <span>Coming soon</span>
+    </div>
+
+    <div class="bar">
+      <div class="bar-fill" style="width: 15%;"></div>
+    </div>
+  </div>
+
+
+  <div class="position-row">
+    <div class="position-label">
+      <span>Other</span>
+      <span>Coming soon</span>
+    </div>
+
+    <div class="bar">
+      <div class="bar-fill" style="width: 5%;"></div>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- FIRST ROUND HISTORY -->
+
+<section class="card">
+
+  <h2>🎯 First-Round Draft History</h2>
+
+  <table>
+
+    <thead>
+      <tr>
+        <th>Season</th>
+        <th>Player</th>
+        <th>Position</th>
+        <th>Pick</th>
+      </tr>
+    </thead>
+
+    <tbody>
+
+      <tr>
+        <td>2025</td>
+        <td>Coming soon</td>
+        <td>—</td>
+        <td>—</td>
+      </tr>
+
+      <tr>
+        <td>2024</td>
+        <td>Coming soon</td>
+        <td>—</td>
+        <td>—</td>
+      </tr>
+
+      <tr>
+        <td>2023</td>
+        <td>Coming soon</td>
+        <td>—</td>
+        <td>—</td>
+      </tr>
+
+      <tr>
+        <td>2022</td>
+        <td>Coming soon</td>
+        <td>—</td>
+        <td>—</td>
+      </tr>
+
+    </tbody>
+
+  </table>
+
+</section>
+
+
+<!-- MOST DRAFTED -->
+
+<section class="card">
+
+  <h2>🔁 Most Drafted Players</h2>
+
+  <ol>
+    <li>Coming soon</li>
+    <li>Coming soon</li>
+    <li>Coming soon</li>
+    <li>Coming soon</li>
+    <li>Coming soon</li>
+  </ol>
+
+</section>
+
+
+<!-- BEST & WORST -->
+
+<section class="card">
+
+  <h2>🔥 Best & Worst</h2>
+
+  <div class="awards">
+
+    <div class="award">
+      <div class="award-title">🏆 Best Season</div>
+      <div class="award-text">Coming soon</div>
+    </div>
+
+    <div class="award">
+      <div class="award-title">💀 Worst Season</div>
+      <div class="award-text">Coming soon</div>
+    </div>
+
+    <div class="award">
+      <div class="award-title">💎 Greatest Draft Steal</div>
+      <div class="award-text">Coming soon</div>
+    </div>
+
+    <div class="award">
+      <div class="award-title">🗑️ Worst Draft Pick</div>
+      <div class="award-text">Coming soon</div>
+    </div>
+
+    <div class="award">
+      <div class="award-title">🔥 Highest-Scoring Team</div>
+      <div class="award-text">Coming soon</div>
+    </div>
+
+    <div class="award">
+      <div class="award-title">😬 Biggest Regret</div>
+      <div class="award-text">Coming soon</div>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- RIVALS -->
+
+<section class="card">
+
+  <h2>⚔️ Rivalries</h2>
+
+  <p>
+    Head-to-head records and longstanding family grudges will
+    eventually live here.
+  </p>
+
+  <table>
+
+    <thead>
+      <tr>
+        <th>Opponent</th>
+        <th>Record</th>
+        <th>Win %</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>Coming soon</td>
+        <td>—</td>
+        <td>—</td>
+      </tr>
+    </tbody>
+
+  </table>
+
+</section>
+
+
+<!-- STORIES -->
+
+<section class="card">
+
+  <h2>🍺 Stories & League Lore</h2>
+
+  <div class="story">
+    <h3>The Story Goes Here</h3>
 
     <p>
-      <a href="../owners.html">← Back to All Owners</a>
+      This section is where the website stops being a spreadsheet.
+      Draft-night disasters, family arguments, legendary trash talk,
+      horrible trades, ridiculous team names and anything else worth
+      preserving can live here.
     </p>
+  </div>
 
-  </main>
+</section>
 
 
-  <footer>
-    <p>Shine Fantasy Football League</p>
-  </footer>
+<!-- QUOTE -->
+
+<section class="card">
+
+  <h2>🗣️ Quote Board</h2>
+
+  <div class="quote">
+    “A legendary Zac quote will eventually go here.”
+  </div>
+
+</section>
+
+
+<!-- PHOTO ARCHIVE -->
+
+<section class="card">
+
+  <h2>📸 Photo Archive</h2>
+
+  <p>
+    Draft-night photos, championship celebrations and incriminating
+    historical evidence coming soon.
+  </p>
+
+</section>
+
+
+<p>
+  <a href="../owners.html">← Back to All Owners</a>
+</p>
+
+
+</main>
+
+
+<footer>
+  Shine Fantasy Football League • History, Stats & Questionable Decisions
+</footer>
 
 </body>
 </html>
