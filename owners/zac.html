@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,28 +16,32 @@
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background: #f5f6f8;
-  color: #18212f;
-  line-height: 1.6;
+  background: #f4f6f5;
+  color: #17202a;
+  line-height: 1.55;
+}
+
+a {
+  color: #176b3a;
 }
 
 /* HEADER */
 
 header {
-  background: #111827;
+  background: #101820;
   color: white;
-  padding: 22px;
-  border-bottom: 5px solid #2f7d4a;
+  border-bottom: 5px solid #24844b;
 }
 
 .header-inner {
-  max-width: 1150px;
+  max-width: 1180px;
   margin: auto;
+  padding: 22px 24px;
 }
 
 header h1 {
   margin: 0;
-  font-size: 26px;
+  font-size: 27px;
 }
 
 nav {
@@ -52,13 +57,13 @@ nav a {
 }
 
 nav a:hover {
-  text-decoration: underline;
+  color: #7ed99b;
 }
 
 /* MAIN */
 
 main {
-  max-width: 1150px;
+  max-width: 1180px;
   margin: 35px auto;
   padding: 0 20px;
 }
@@ -66,87 +71,100 @@ main {
 /* OWNER HERO */
 
 .owner-hero {
-  background: white;
+  background: #fff;
   border-radius: 14px;
   padding: 35px;
   display: flex;
   align-items: center;
   gap: 30px;
-  box-shadow: 0 3px 14px rgba(0,0,0,.08);
-  margin-bottom: 25px;
+  box-shadow: 0 3px 14px rgba(0,0,0,.07);
+  margin-bottom: 22px;
 }
 
 .owner-photo {
-  width: 150px;
-  height: 150px;
-  background: #e5e7eb;
+  width: 145px;
+  height: 145px;
   border-radius: 50%;
+  background: #101820;
+  color: white;
+  border: 6px solid #24844b;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 48px;
+  font-size: 42px;
+  font-weight: bold;
   flex-shrink: 0;
-  border: 5px solid #2f7d4a;
 }
 
 .owner-info h2 {
-  font-size: 38px;
+  font-size: 40px;
   margin: 0;
+  line-height: 1.1;
 }
 
 .owner-subtitle {
-  color: #6b7280;
-  margin-top: 2px;
+  color: #24844b;
+  font-weight: bold;
+  margin-top: 7px;
 }
 
 .owner-description {
-  max-width: 700px;
-  margin-top: 15px;
+  max-width: 740px;
+  color: #58616b;
+  margin-top: 12px;
 }
 
-/* STAT CARDS */
+/* TOP STATS */
 
 .stats {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 15px;
-  margin-bottom: 25px;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 13px;
+  margin-bottom: 24px;
 }
 
 .stat {
-  background: #111827;
+  background: #101820;
   color: white;
-  padding: 22px;
-  border-radius: 12px;
+  padding: 22px 15px;
+  border-radius: 11px;
   text-align: center;
 }
 
 .stat-number {
   display: block;
-  font-size: 30px;
+  color: #7ed99b;
+  font-size: 29px;
   font-weight: bold;
-  color: #7ed39b;
 }
 
 .stat-label {
-  font-size: 13px;
-  color: #d1d5db;
+  display: block;
+  margin-top: 3px;
+  font-size: 11px;
+  color: #cbd2d8;
+  text-transform: uppercase;
+  letter-spacing: .6px;
 }
 
-/* GENERAL CARDS */
+/* CARDS */
 
 .card {
   background: white;
   border-radius: 12px;
-  padding: 28px;
-  margin-bottom: 24px;
-  box-shadow: 0 3px 12px rgba(0,0,0,.06);
+  padding: 27px;
+  margin-bottom: 22px;
+  box-shadow: 0 3px 12px rgba(0,0,0,.055);
 }
 
 .card h2 {
-  margin-top: 0;
-  border-bottom: 2px solid #e5e7eb;
+  margin: 0 0 18px;
   padding-bottom: 10px;
+  border-bottom: 2px solid #e7e9eb;
+}
+
+.card h3 {
+  margin-top: 0;
 }
 
 .two-column {
@@ -155,65 +173,158 @@ main {
   gap: 24px;
 }
 
+/* RESUME */
+
+.resume-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.resume-item {
+  padding: 18px;
+  background: #f7f9f8;
+  border-left: 5px solid #24844b;
+}
+
+.resume-title {
+  color: #606971;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.resume-value {
+  margin-top: 5px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
 /* DRAFT PERSONALITY */
 
 .position-row {
-  margin-bottom: 16px;
+  margin: 18px 0;
 }
 
 .position-label {
   display: flex;
   justify-content: space-between;
   font-weight: bold;
-  margin-bottom: 5px;
+  margin-bottom: 6px;
 }
 
 .bar {
-  background: #e5e7eb;
-  height: 16px;
+  height: 18px;
+  background: #e5e7e9;
   border-radius: 10px;
   overflow: hidden;
 }
 
 .bar-fill {
-  background: #2f7d4a;
   height: 100%;
+  background: #24844b;
+}
+
+.draft-callout {
+  margin-top: 22px;
+  background: #eff8f2;
+  border: 1px solid #cae8d3;
+  border-radius: 9px;
+  padding: 18px;
 }
 
 /* TABLE */
 
+.table-wrap {
+  overflow-x: auto;
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
+  min-width: 680px;
 }
 
 th {
-  background: #111827;
+  background: #101820;
   color: white;
   text-align: left;
 }
 
-th, td {
-  padding: 12px;
-  border-bottom: 1px solid #e5e7eb;
+th,
+td {
+  padding: 11px 12px;
+  border-bottom: 1px solid #e2e5e7;
 }
 
-tr:hover {
-  background: #f8fafc;
+tbody tr:hover {
+  background: #f6f8f7;
 }
 
-/* AWARDS */
+.champion-row {
+  background: #edf8f0;
+  font-weight: bold;
+}
+
+.runner-row {
+  background: #f5f5f5;
+}
+
+/* PILLS */
+
+.pill {
+  display: inline-block;
+  border-radius: 20px;
+  padding: 3px 9px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.rb {
+  background: #dff2e5;
+  color: #176b3a;
+}
+
+.wr {
+  background: #e6edf8;
+  color: #28588c;
+}
+
+/* MOST DRAFTED */
+
+.player-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.player-box {
+  background: #f7f9f8;
+  border-radius: 8px;
+  padding: 17px;
+}
+
+.player-box strong {
+  font-size: 17px;
+}
+
+.draft-count {
+  color: #24844b;
+  font-weight: bold;
+}
+
+/* BEST / WORST */
 
 .awards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
+  gap: 13px;
 }
 
 .award {
-  border-left: 5px solid #2f7d4a;
-  background: #f8fafc;
-  padding: 14px 18px;
+  background: #f7f9f8;
+  border-left: 5px solid #24844b;
+  padding: 17px;
 }
 
 .award-title {
@@ -221,57 +332,85 @@ tr:hover {
 }
 
 .award-text {
-  color: #6b7280;
+  color: #616970;
+  margin-top: 4px;
 }
 
-/* QUOTE */
+/* TIMELINE */
 
-.quote {
-  font-size: 21px;
-  font-style: italic;
-  border-left: 6px solid #2f7d4a;
-  padding: 15px 20px;
-  background: #f8fafc;
+.timeline {
+  border-left: 4px solid #24844b;
+  margin-left: 10px;
+  padding-left: 24px;
 }
 
-/* STORY */
-
-.story {
-  margin-bottom: 20px;
+.timeline-item {
+  margin-bottom: 23px;
+  position: relative;
 }
 
-.story h3 {
-  margin-bottom: 4px;
+.timeline-item:before {
+  content: "";
+  width: 13px;
+  height: 13px;
+  background: #24844b;
+  border-radius: 50%;
+  position: absolute;
+  left: -32px;
+  top: 6px;
+}
+
+.timeline-year {
+  font-weight: bold;
+  color: #24844b;
 }
 
 /* FOOTER */
 
 footer {
-  background: #111827;
-  color: #9ca3af;
+  margin-top: 45px;
+  background: #101820;
+  color: #aab2b9;
   text-align: center;
-  padding: 30px;
-  margin-top: 50px;
+  padding: 28px;
 }
 
 /* MOBILE */
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
+
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .resume-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .player-list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+@media (max-width: 650px) {
 
   .owner-hero {
     flex-direction: column;
     text-align: center;
   }
 
+  .owner-info h2 {
+    font-size: 34px;
+  }
+
   .stats {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
   }
 
-  .two-column {
-    grid-template-columns: 1fr;
-  }
-
-  .awards {
+  .two-column,
+  .awards,
+  .player-list {
     grid-template-columns: 1fr;
   }
 
@@ -289,7 +428,6 @@ footer {
 <body>
 
 <header>
-
   <div class="header-inner">
 
     <h1>🏈 Shine Fantasy Football League</h1>
@@ -303,7 +441,6 @@ footer {
     </nav>
 
   </div>
-
 </header>
 
 
@@ -323,13 +460,13 @@ footer {
     <h2>Zac Benjamin</h2>
 
     <div class="owner-subtitle">
-      Shine Fantasy Football League Owner
+      League Member • 2012–Present
     </div>
 
     <div class="owner-description">
-      Career statistics, draft tendencies, championship history,
-      memorable seasons and questionable personnel decisions from
-      one of the league's longtime owners.
+      Fourteen documented seasons. One championship. One runner-up finish.
+      And perhaps the most predictable first-round strategy in Shine League
+      history: draft a running back.
     </div>
 
   </div>
@@ -342,56 +479,69 @@ footer {
 <section class="stats">
 
   <div class="stat">
-    <span class="stat-number">—</span>
-    <span class="stat-label">CHAMPIONSHIPS</span>
+    <span class="stat-number">1</span>
+    <span class="stat-label">Championship</span>
   </div>
 
   <div class="stat">
-    <span class="stat-number">—</span>
-    <span class="stat-label">REGULAR SEASON TITLES</span>
+    <span class="stat-number">1</span>
+    <span class="stat-label">Runner-Up</span>
   </div>
 
   <div class="stat">
-    <span class="stat-number">—</span>
-    <span class="stat-label">PLAYOFF APPEARANCES</span>
+    <span class="stat-number">91–96</span>
+    <span class="stat-label">Regular Season Record</span>
   </div>
 
   <div class="stat">
-    <span class="stat-number">—</span>
-    <span class="stat-label">CAREER WIN %</span>
+    <span class="stat-number">48.7%</span>
+    <span class="stat-label">Win Percentage</span>
+  </div>
+
+  <div class="stat">
+    <span class="stat-number">14</span>
+    <span class="stat-label">Documented Seasons</span>
   </div>
 
 </section>
 
 
-<!-- OWNER RESUME -->
+<!-- RESUME -->
 
 <section class="card">
 
   <h2>🏆 Owner Resume</h2>
 
-  <div class="two-column">
+  <div class="resume-grid">
 
-    <div>
-      <strong>League Member Since</strong>
-      <p>Coming soon</p>
-
-      <strong>Best Regular Season Finish</strong>
-      <p>Coming soon</p>
-
-      <strong>Best Championship Finish</strong>
-      <p>Coming soon</p>
+    <div class="resume-item">
+      <div class="resume-title">Championship Season</div>
+      <div class="resume-value">2015</div>
     </div>
 
-    <div>
-      <strong>Career Record</strong>
-      <p>Coming soon</p>
+    <div class="resume-item">
+      <div class="resume-title">Runner-Up Season</div>
+      <div class="resume-value">2023</div>
+    </div>
 
-      <strong>Total Points Scored</strong>
-      <p>Coming soon</p>
+    <div class="resume-item">
+      <div class="resume-title">Best Finish</div>
+      <div class="resume-value">1st</div>
+    </div>
 
-      <strong>Most Successful Season</strong>
-      <p>Coming soon</p>
+    <div class="resume-item">
+      <div class="resume-title">Worst Finish</div>
+      <div class="resume-value">11th</div>
+    </div>
+
+    <div class="resume-item">
+      <div class="resume-title">Average Final Finish</div>
+      <div class="resume-value">6.1</div>
+    </div>
+
+    <div class="resume-item">
+      <div class="resume-title">Total Points Scored</div>
+      <div class="resume-value">19,631.65</div>
     </div>
 
   </div>
@@ -406,55 +556,47 @@ footer {
   <h2>📊 Draft Personality</h2>
 
   <p>
-    What position does Zac historically target with his most
-    important pick?
+    There is very little mystery here. From 2012 through 2024,
+    Zac selected a running back in the first round every single year.
+    The streak finally ended in 2025 with CeeDee Lamb.
   </p>
 
   <div class="position-row">
+
     <div class="position-label">
       <span>Running Back</span>
-      <span>Coming soon</span>
+      <span>13 of 14 drafts • 92.9%</span>
     </div>
 
     <div class="bar">
-      <div class="bar-fill" style="width: 70%;"></div>
+      <div class="bar-fill" style="width:92.9%"></div>
     </div>
+
   </div>
 
-
   <div class="position-row">
+
     <div class="position-label">
       <span>Wide Receiver</span>
-      <span>Coming soon</span>
+      <span>1 of 14 drafts • 7.1%</span>
     </div>
 
     <div class="bar">
-      <div class="bar-fill" style="width: 45%;"></div>
+      <div class="bar-fill" style="width:7.1%"></div>
     </div>
+
   </div>
 
+  <div class="draft-callout">
 
-  <div class="position-row">
-    <div class="position-label">
-      <span>Quarterback</span>
-      <span>Coming soon</span>
-    </div>
+    <strong>Draft Identity:</strong>
+    RB early, figure everything else out later.
 
-    <div class="bar">
-      <div class="bar-fill" style="width: 15%;"></div>
-    </div>
-  </div>
+    <br><br>
 
+    Zac used 13 consecutive documented first-round selections on running backs
+    before selecting CeeDee Lamb with the No. 1 overall pick in 2025.
 
-  <div class="position-row">
-    <div class="position-label">
-      <span>Other</span>
-      <span>Coming soon</span>
-    </div>
-
-    <div class="bar">
-      <div class="bar-fill" style="width: 5%;"></div>
-    </div>
   </div>
 
 </section>
@@ -464,52 +606,126 @@ footer {
 
 <section class="card">
 
-  <h2>🎯 First-Round Draft History</h2>
+<h2>🎯 Complete First-Round Draft History</h2>
 
-  <table>
+<div class="table-wrap">
 
-    <thead>
-      <tr>
-        <th>Season</th>
-        <th>Player</th>
-        <th>Position</th>
-        <th>Pick</th>
-      </tr>
-    </thead>
+<table>
 
-    <tbody>
+<thead>
+<tr>
+  <th>Year</th>
+  <th>Player</th>
+  <th>Position</th>
+  <th>Overall Pick</th>
+</tr>
+</thead>
 
-      <tr>
-        <td>2025</td>
-        <td>Coming soon</td>
-        <td>—</td>
-        <td>—</td>
-      </tr>
+<tbody>
 
-      <tr>
-        <td>2024</td>
-        <td>Coming soon</td>
-        <td>—</td>
-        <td>—</td>
-      </tr>
+<tr>
+<td>2012</td>
+<td>LeSean McCoy</td>
+<td><span class="pill rb">RB</span></td>
+<td>6</td>
+</tr>
 
-      <tr>
-        <td>2023</td>
-        <td>Coming soon</td>
-        <td>—</td>
-        <td>—</td>
-      </tr>
+<tr>
+<td>2013</td>
+<td>LeSean McCoy</td>
+<td><span class="pill rb">RB</span></td>
+<td>13</td>
+</tr>
 
-      <tr>
-        <td>2022</td>
-        <td>Coming soon</td>
-        <td>—</td>
-        <td>—</td>
-      </tr>
+<tr>
+<td>2014</td>
+<td>Matt Forte</td>
+<td><span class="pill rb">RB</span></td>
+<td>5</td>
+</tr>
 
-    </tbody>
+<tr>
+<td>2015</td>
+<td>Le'Veon Bell</td>
+<td><span class="pill rb">RB</span></td>
+<td>1</td>
+</tr>
 
-  </table>
+<tr>
+<td>2016</td>
+<td>Devonta Freeman</td>
+<td><span class="pill rb">RB</span></td>
+<td>12</td>
+</tr>
+
+<tr>
+<td>2017</td>
+<td>David Johnson</td>
+<td><span class="pill rb">RB</span></td>
+<td>1</td>
+</tr>
+
+<tr>
+<td>2018</td>
+<td>Le'Veon Bell</td>
+<td><span class="pill rb">RB</span></td>
+<td>6</td>
+</tr>
+
+<tr>
+<td>2019</td>
+<td>Saquon Barkley</td>
+<td><span class="pill rb">RB</span></td>
+<td>4</td>
+</tr>
+
+<tr>
+<td>2020</td>
+<td>Derrick Henry</td>
+<td><span class="pill rb">RB</span></td>
+<td>3</td>
+</tr>
+
+<tr>
+<td>2021</td>
+<td>Alvin Kamara</td>
+<td><span class="pill rb">RB</span></td>
+<td>7</td>
+</tr>
+
+<tr>
+<td>2022</td>
+<td>Austin Ekeler</td>
+<td><span class="pill rb">RB</span></td>
+<td>4</td>
+</tr>
+
+<tr>
+<td>2023</td>
+<td>Christian McCaffrey</td>
+<td><span class="pill rb">RB</span></td>
+<td>8</td>
+</tr>
+
+<tr>
+<td>2024</td>
+<td>Breece Hall</td>
+<td><span class="pill rb">RB</span></td>
+<td>11</td>
+</tr>
+
+<tr>
+<td>2025</td>
+<td>CeeDee Lamb</td>
+<td><span class="pill wr">WR</span></td>
+<td>1</td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
 
 </section>
 
@@ -518,92 +734,300 @@ footer {
 
 <section class="card">
 
-  <h2>🔁 Most Drafted Players</h2>
+<h2>🔁 Most Drafted Players</h2>
 
-  <ol>
-    <li>Coming soon</li>
-    <li>Coming soon</li>
-    <li>Coming soon</li>
-    <li>Coming soon</li>
-    <li>Coming soon</li>
-  </ol>
+<p>
+  These are the offensive players who appeared most often on Zac's
+  documented draft-day rosters from 2012–2025.
+</p>
 
-</section>
+<div class="player-list">
 
-
-<!-- BEST & WORST -->
-
-<section class="card">
-
-  <h2>🔥 Best & Worst</h2>
-
-  <div class="awards">
-
-    <div class="award">
-      <div class="award-title">🏆 Best Season</div>
-      <div class="award-text">Coming soon</div>
-    </div>
-
-    <div class="award">
-      <div class="award-title">💀 Worst Season</div>
-      <div class="award-text">Coming soon</div>
-    </div>
-
-    <div class="award">
-      <div class="award-title">💎 Greatest Draft Steal</div>
-      <div class="award-text">Coming soon</div>
-    </div>
-
-    <div class="award">
-      <div class="award-title">🗑️ Worst Draft Pick</div>
-      <div class="award-text">Coming soon</div>
-    </div>
-
-    <div class="award">
-      <div class="award-title">🔥 Highest-Scoring Team</div>
-      <div class="award-text">Coming soon</div>
-    </div>
-
-    <div class="award">
-      <div class="award-title">😬 Biggest Regret</div>
-      <div class="award-text">Coming soon</div>
-    </div>
-
+  <div class="player-box">
+    <strong>1. Aaron Rodgers</strong><br>
+    <span class="draft-count">4 drafts</span><br>
+    2014, 2019, 2021, 2022
   </div>
 
+  <div class="player-box">
+    <strong>2. LeSean McCoy</strong><br>
+    <span class="draft-count">3 drafts</span><br>
+    2012, 2013, 2019
+  </div>
+
+  <div class="player-box">
+    <strong>James Starks</strong><br>
+    <span class="draft-count">3 drafts</span><br>
+    2012, 2014, 2016
+  </div>
+
+  <div class="player-box">
+    <strong>Adam Thielen</strong><br>
+    <span class="draft-count">3 drafts</span><br>
+    2019, 2020, 2022
+  </div>
+
+  <div class="player-box">
+    <strong>Robert Woods</strong><br>
+    <span class="draft-count">3 drafts</span><br>
+    2019, 2020, 2021
+  </div>
+
+  <div class="player-box">
+    <strong>Kenny Golladay</strong><br>
+    <span class="draft-count">3 drafts</span><br>
+    2019, 2021, 2022
+  </div>
+
+</div>
+
 </section>
 
 
-<!-- RIVALS -->
+<!-- SEASON HISTORY -->
 
 <section class="card">
 
-  <h2>⚔️ Rivalries</h2>
+<h2>📅 Season-by-Season History</h2>
 
-  <p>
-    Head-to-head records and longstanding family grudges will
-    eventually live here.
-  </p>
+<div class="table-wrap">
 
-  <table>
+<table>
 
-    <thead>
-      <tr>
-        <th>Opponent</th>
-        <th>Record</th>
-        <th>Win %</th>
-      </tr>
-    </thead>
+<thead>
+<tr>
+  <th>Year</th>
+  <th>Team Name</th>
+  <th>Record</th>
+  <th>Final Finish</th>
+  <th>Points For</th>
+</tr>
+</thead>
 
-    <tbody>
-      <tr>
-        <td>Coming soon</td>
-        <td>—</td>
-        <td>—</td>
-      </tr>
-    </tbody>
+<tbody>
 
-  </table>
+<tr>
+<td>2012</td>
+<td>Finding My One True Love</td>
+<td>6–7</td>
+<td>11th</td>
+<td>1,288.7</td>
+</tr>
+
+<tr>
+<td>2013</td>
+<td>The Athletic Dalton Twin</td>
+<td>9–4</td>
+<td>3rd</td>
+<td>1,356.0</td>
+</tr>
+
+<tr>
+<td>2014</td>
+<td>Anybody But Rick</td>
+<td>7–6</td>
+<td>5th</td>
+<td>1,344.3</td>
+</tr>
+
+<tr class="champion-row">
+<td>2015 🏆</td>
+<td>Just Floating Along</td>
+<td>6–7</td>
+<td>CHAMPION</td>
+<td>1,305.3</td>
+</tr>
+
+<tr>
+<td>2016</td>
+<td>The Pirates Who Dont DoAnything</td>
+<td>7–6</td>
+<td>4th</td>
+<td>1,381.1</td>
+</tr>
+
+<tr>
+<td>2017</td>
+<td>The Redskin Wedding</td>
+<td>6–7</td>
+<td>7th</td>
+<td>1,193.8</td>
+</tr>
+
+<tr>
+<td>2018</td>
+<td>Lamar Miller Time!</td>
+<td>8–5</td>
+<td>4th</td>
+<td>1,505.3</td>
+</tr>
+
+<tr>
+<td>2019</td>
+<td>Aaron Rodgers OverSteveRogers</td>
+<td>7–6</td>
+<td>10th</td>
+<td>1,315.9</td>
+</tr>
+
+<tr>
+<td>2020</td>
+<td>Wuhan BATatouille</td>
+<td>6–7</td>
+<td>6th</td>
+<td>1,413.6</td>
+</tr>
+
+<tr>
+<td>2021</td>
+<td>"Immunized" to The Adam</td>
+<td>8–6</td>
+<td>9th</td>
+<td>1,576.0</td>
+</tr>
+
+<tr>
+<td>2022</td>
+<td>Q-Amon And The Lazard People</td>
+<td>8–6</td>
+<td>5th</td>
+<td>1,606.0</td>
+</tr>
+
+<tr class="runner-row">
+<td>2023 🥈</td>
+<td>Rachaad White's Open, Wide Open</td>
+<td>7–7</td>
+<td>2nd</td>
+<td>1,592.05</td>
+</tr>
+
+<tr>
+<td>2024</td>
+<td>I Paid $15 for Bo Nix...</td>
+<td>2–12</td>
+<td>8th</td>
+<td>1,345.1</td>
+</tr>
+
+<tr>
+<td>2025</td>
+<td>The Grim Reaper Bear</td>
+<td>4–10</td>
+<td>10th</td>
+<td>1,408.5</td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</section>
+
+
+<!-- BEST / WORST -->
+
+<section class="card">
+
+<h2>🔥 The Good, The Bad & The Ugly</h2>
+
+<div class="awards">
+
+  <div class="award">
+    <div class="award-title">🏆 Greatest Finish</div>
+    <div class="award-text">
+      2015 Champion — Just Floating Along
+    </div>
+  </div>
+
+  <div class="award">
+    <div class="award-title">🥈 Closest Call</div>
+    <div class="award-text">
+      Runner-up in 2023 with Rachaad White's Open, Wide Open.
+    </div>
+  </div>
+
+  <div class="award">
+    <div class="award-title">📈 Best Regular-Season Record</div>
+    <div class="award-text">
+      9–4 in 2013.
+    </div>
+  </div>
+
+  <div class="award">
+    <div class="award-title">💀 Worst Regular-Season Record</div>
+    <div class="award-text">
+      2–12 in 2024.
+    </div>
+  </div>
+
+  <div class="award">
+    <div class="award-title">👑 Favorite First-Round Position</div>
+    <div class="award-text">
+      Running back — 13 consecutive first-round RB selections from 2012–2024.
+    </div>
+  </div>
+
+  <div class="award">
+    <div class="award-title">🔁 Draft-Day Relationship</div>
+    <div class="award-text">
+      Aaron Rodgers — drafted four separate times.
+    </div>
+  </div>
+
+</div>
+
+</section>
+
+
+<!-- TIMELINE -->
+
+<section class="card">
+
+<h2>📖 Zac's Shine League Timeline</h2>
+
+<div class="timeline">
+
+  <div class="timeline-item">
+    <div class="timeline-year">2012</div>
+    <strong>The documented era begins.</strong><br>
+    Finding My One True Love finishes 11th.
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-year">2013</div>
+    <strong>First top-three finish.</strong><br>
+    A 9–4 regular season leads to a third-place finish.
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-year">2015</div>
+    <strong>Champion.</strong><br>
+    Just Floating Along wins the Shine League title despite a 6–7 regular season.
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-year">2023</div>
+    <strong>Back to the championship game.</strong><br>
+    Rachaad White's Open, Wide Open finishes second.
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-year">2024</div>
+    <strong>Rock bottom.</strong><br>
+    I Paid $15 for Bo Nix... goes 2–12.
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-year">2025</div>
+    <strong>The RB streak finally dies.</strong><br>
+    After thirteen straight documented first-round running backs,
+    Zac takes CeeDee Lamb No. 1 overall.
+  </div>
+
+</div>
 
 </section>
 
@@ -612,31 +1036,18 @@ footer {
 
 <section class="card">
 
-  <h2>🍺 Stories & League Lore</h2>
+<h2>🍺 Stories & League Lore</h2>
 
-  <div class="story">
-    <h3>The Story Goes Here</h3>
+<p>
+  This is where we'll eventually add the stuff that the spreadsheets can't capture:
+  draft-night arguments, terrible trade offers, ridiculous team-name origins,
+  legendary trash talk and stories that only make sense to the people in this league.
+</p>
 
-    <p>
-      This section is where the website stops being a spreadsheet.
-      Draft-night disasters, family arguments, legendary trash talk,
-      horrible trades, ridiculous team names and anything else worth
-      preserving can live here.
-    </p>
-  </div>
-
-</section>
-
-
-<!-- QUOTE -->
-
-<section class="card">
-
-  <h2>🗣️ Quote Board</h2>
-
-  <div class="quote">
-    “A legendary Zac quote will eventually go here.”
-  </div>
+<p>
+  <strong>Send me the stories whenever you remember them.</strong>
+  They don't need to be polished. We'll turn them into proper league lore later.
+</p>
 
 </section>
 
@@ -645,12 +1056,12 @@ footer {
 
 <section class="card">
 
-  <h2>📸 Photo Archive</h2>
+<h2>📸 Photo Archive</h2>
 
-  <p>
-    Draft-night photos, championship celebrations and incriminating
-    historical evidence coming soon.
-  </p>
+<p>
+  Photos will eventually live here — draft nights, championship celebrations,
+  old draft boards, trophies and anything else worth preserving.
+</p>
 
 </section>
 
@@ -668,4 +1079,5 @@ footer {
 </footer>
 
 </body>
+
 </html>
